@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="List of publications" href="../../content/pubs/" /><link rel="prev" title="Basic Usage" href="../../content/basic_usage/" />
-        <link rel="canonical" href="https://fenggu.me/MiniGrid/api/wrappers.html" />
+        <link rel="canonical" href="https://fenggu.me/api/wrappers.html" />
 
     <link rel="shortcut icon" href="../../_static/minigrid-white.svg"/><meta name="generator" content="sphinx-4.2.0, furo 2022.06.21"/>
         <title>Wrappers - MiniGrid Documentation</title>
@@ -242,7 +242,7 @@ describing the objective the agent should reach to get a reward, and a ‘direct
 field which can be used as an optional compass. Using dictionaries makes it
 easy for you to add additional information to observations
 if you need to, without having to encode everything into a single tensor.</p>
-<p>There are a variety of wrappers to change the observation format available in <a class="reference download internal" download="" href="../../_downloads/60f11ba2bf25522bf0d7bcd2f4cd9cf7/wrappers.py"><span class="xref download myst">minigrid/wrappers.py</span></a>.
+<p>There are a variety of wrappers to change the observation format available in <span class="xref myst">minigrid/wrappers.py</span>.
 If your RL code expects one single tensor for observations, take a look at <code class="docutils literal notranslate"><span class="pre">FlatObsWrapper</span></code>.
 There is also an <code class="docutils literal notranslate"><span class="pre">ImgObsWrapper</span></code> that gets rid of the ‘mission’ field in observations, leaving only the image field tensor.</p>
 <p>Please note that the default observation format is a partially observable view of the environment using a
