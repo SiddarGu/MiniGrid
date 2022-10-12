@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Unlock Pickup" href="../unlock_pickup/" /><link rel="prev" title="Red Blue Doors" href="../red_blue_doors/" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" />
         <link rel="canonical" href="https://minigrid.farama.org/environments/unlock.html" />
 
     <link rel="shortcut icon" href="../../_static/minigrid-white.png"/><meta name="generator" content="sphinx-5.2.3, furo 2022.09.15.dev1"/>
@@ -228,56 +228,25 @@
   <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../content/basic_usage/">Basic Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../content/basic_usage/#reinforcement-learning">Reinforcement Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/basic_usage/#training-an-agent">Training an Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/publications/">List of Publications</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Wrappers</span></p>
 <ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../api/wrappers/">Wrappers</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../api/ActionBonus/">ActionBonus</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../api/DictObservationSpaceWrapper/">DictObservationSpaceWrapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../api/DirectionObsWrapper/">DirectionObsWrapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../api/FlatObsWrapper/">FlatObsWrapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../api/FullyObsWrapper/">FullyObsWrapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../api/ImgObsWrapper/">ImgObsWrapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../api/ObservationWrapper/">ObservationWrapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../api/OneHotPartialObsWrapper/">OneHotPartialObsWrapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../api/RGBImgObsWrapper/">RGBImgObsWrapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../api/RGBImgPartialObsWrapper/">RGBImgPartialObsWrapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../api/ReseedWrapper/">ReseedWrapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../api/StateBonus/">StateBonus</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../api/SymbolicObsWrapper/">SymbolicObsWrapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../api/ViewSizeWrapper/">ViewSizeWrapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../api/Wrapper/">Wrapper</a></li>
-</ul>
-</li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Environments</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../design/">Design</a></li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="../">Included Environments</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../boss_level_no_unlock/">Boss Level No Unlock</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../blocked_unlock_pickup/">Blocked Unlock Pickup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../simple_crossing/">Simple Crossing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dist_shift/">Dist Shift</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../door_key/">Door Key</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dynamic/">Dynamic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../empty/">Empty</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../fetch/">Fetch</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../four_rooms/">Four Rooms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../go_to_door/">Go To Door</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../go_to_object/">Go To Object</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../key_corridor/">Key Corridor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../lava_gap/">Lava Gap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../locked_room/">Locked Room</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../memory/">Memory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../multi_room/">Multi Room</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../obstructed_maze/">Obstructed Maze</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../obstructed_maze/">Obstructed Maze</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../playground/">Playground</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../put_near/">Put Near</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../red_blue_doors/">Red Blue Doors</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Unlock</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../unlock_pickup/">Unlock Pickup</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../api/wrapper/">Wrapper</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../api/wrappers/">Action Bonus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/wrappers/#dict-observation-space">Dict Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/wrappers/#direction-obs">Direction Obs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/wrappers/#flatobs">FlatObs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/wrappers/#fully-obs">Fully Obs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/wrappers/#img-obs">Img Obs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/wrappers/#observation">Observation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/wrappers/#one-hot-partial-obs">One Hot Partial Obs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/wrappers/#reseed">Reseed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/wrappers/#rgb-img-obs">RGB Img Obs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/wrappers/#state-bonus">State Bonus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/wrappers/#symbolic-obs">Symbolic Obs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../api/wrappers/#view-size">View Size</a></li>
 </ul>
 </li>
 </ul>
@@ -409,26 +378,8 @@ relying on language.</p>
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../unlock_pickup/">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">Unlock Pickup</div>
-              </div>
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-            </a>
-            <a class="prev-page" href="../red_blue_doors/">
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">Red Blue Doors</div>
-                
-              </div>
-            </a>
+          
+            
         </div>
         <div class="bottom-of-page">
           <div class="left-details">

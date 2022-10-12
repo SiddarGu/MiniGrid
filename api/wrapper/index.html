@@ -3,11 +3,11 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="FlatObsWrapper" href="../FlatObsWrapper/" /><link rel="prev" title="DictObservationSpaceWrapper" href="../DictObservationSpaceWrapper/" />
-        <link rel="canonical" href="https://minigrid.farama.org/api/DirectionObsWrapper.html" />
+<link rel="index" title="Index" href="../../genindex/" /><link rel="search" title="Search" href="../../search/" /><link rel="next" title="Action Bonus" href="../wrappers/" /><link rel="prev" title="List of Publications" href="../../content/publications/" />
+        <link rel="canonical" href="https://minigrid.farama.org/api/wrapper.html" />
 
     <link rel="shortcut icon" href="../../_static/minigrid-white.png"/><meta name="generator" content="sphinx-5.2.3, furo 2022.09.15.dev1"/>
-        <title>DirectionObsWrapper - MiniGrid Documentation</title>
+        <title>Wrapper - MiniGrid Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=9ec31e2665bf879c1d47d93a8ec4893870ee1e45" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=c2d5e51f39e130612d57e150aebc94239a19910f" />
@@ -228,56 +228,25 @@
   <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../content/basic_usage/">Basic Usage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../content/basic_usage/#reinforcement-learning">Reinforcement Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/basic_usage/#training-an-agent">Training an Agent</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../content/publications/">List of Publications</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Wrappers</span></p>
 <ul class="current">
-<li class="toctree-l1 current has-children"><a class="reference internal" href="../wrappers/">Wrappers</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../ActionBonus/">ActionBonus</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../DictObservationSpaceWrapper/">DictObservationSpaceWrapper</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">DirectionObsWrapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../FlatObsWrapper/">FlatObsWrapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../FullyObsWrapper/">FullyObsWrapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ImgObsWrapper/">ImgObsWrapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ObservationWrapper/">ObservationWrapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../OneHotPartialObsWrapper/">OneHotPartialObsWrapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../RGBImgObsWrapper/">RGBImgObsWrapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../RGBImgPartialObsWrapper/">RGBImgPartialObsWrapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ReseedWrapper/">ReseedWrapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../StateBonus/">StateBonus</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../SymbolicObsWrapper/">SymbolicObsWrapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ViewSizeWrapper/">ViewSizeWrapper</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Wrapper/">Wrapper</a></li>
-</ul>
-</li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Environments</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../environments/design/">Design</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../environments/">Included Environments</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/boss_level_no_unlock/">Boss Level No Unlock</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/blocked_unlock_pickup/">Blocked Unlock Pickup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/simple_crossing/">Simple Crossing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/dist_shift/">Dist Shift</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/door_key/">Door Key</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/dynamic/">Dynamic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/empty/">Empty</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/fetch/">Fetch</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/four_rooms/">Four Rooms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/go_to_door/">Go To Door</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/go_to_object/">Go To Object</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/key_corridor/">Key Corridor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/lava_gap/">Lava Gap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/locked_room/">Locked Room</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/memory/">Memory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/multi_room/">Multi Room</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/obstructed_maze/">Obstructed Maze</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/obstructed_maze/">Obstructed Maze</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/playground/">Playground</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/put_near/">Put Near</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/red_blue_doors/">Red Blue Doors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/unlock/">Unlock</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../environments/unlock_pickup/">Unlock Pickup</a></li>
+<li class="toctree-l1 current has-children current-page"><a class="current reference internal" href="#">Wrapper</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../wrappers/">Action Bonus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wrappers/#dict-observation-space">Dict Observation Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wrappers/#direction-obs">Direction Obs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wrappers/#flatobs">FlatObs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wrappers/#fully-obs">Fully Obs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wrappers/#img-obs">Img Obs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wrappers/#observation">Observation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wrappers/#one-hot-partial-obs">One Hot Partial Obs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wrappers/#reseed">Reseed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wrappers/#rgb-img-obs">RGB Img Obs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wrappers/#state-bonus">State Bonus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wrappers/#symbolic-obs">Symbolic Obs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wrappers/#view-size">View Size</a></li>
 </ul>
 </li>
 </ul>
@@ -308,7 +277,7 @@
           
     
     <div class="edit-this-page">
-  <a class="muted-link" href="https://github.com/Farama-Foundation/Minigrid/edit/master/docs/api/DirectionObsWrapper.md" title="Edit this page">
+  <a class="muted-link" href="https://github.com/Farama-Foundation/Minigrid/edit/master/docs/api/wrapper.md" title="Edit this page">
     <svg aria-hidden="true" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
       <path d="M4 20h4l10.5 -10.5a1.5 1.5 0 0 0 -4 -4l-10.5 10.5v4" />
@@ -331,9 +300,34 @@
         </div>
         <article role="main">
           
-          <section id="directionobswrapper">
-<h1>DirectionObsWrapper<a class="headerlink" href="#directionobswrapper" title="Permalink to this heading">#</a></h1>
-<p>Provides the slope/angular direction to the goal with the observations as modeled by (y2 - y2 )/( x2 - x1) type = {slope , angle}</p>
+          <section id="wrapper">
+<h1>Wrapper<a class="headerlink" href="#wrapper" title="Permalink to this heading">#</a></h1>
+<p>Wraps an environment to allow a modular transformation of the :meth:<code class="docutils literal notranslate"><span class="pre">step</span></code> and :meth:<code class="docutils literal notranslate"><span class="pre">reset</span></code> methods. This class is the base class for all wrappers. The subclass could override some methods to change the behavior of the original environment without touching the original code. Note: Don’t forget to call <code class="docutils literal notranslate"><span class="pre">super().__init__(env)</span></code> if the subclass overrides :meth:<code class="docutils literal notranslate"><span class="pre">__init__</span></code>.</p>
+<p>MiniGrid is built to support tasks involving natural language and sparse rewards.
+The observations are dictionaries, with an ‘image’ field, partially observable
+view of the environment, a ‘mission’ field which is a textual string
+describing the objective the agent should reach to get a reward, and a ‘direction’
+field which can be used as an optional compass. Using dictionaries makes it
+easy for you to add additional information to observations
+if you need to, without having to encode everything into a single tensor.</p>
+<p>There are a variety of wrappers to change the observation format available in <span class="xref myst">minigrid/wrappers.py</span>.
+If your RL code expects one single tensor for observations, take a look at <code class="docutils literal notranslate"><span class="pre">FlatObsWrapper</span></code>.
+There is also an <code class="docutils literal notranslate"><span class="pre">ImgObsWrapper</span></code> that gets rid of the ‘mission’ field in observations, leaving only the image field tensor.</p>
+<p>Please note that the default observation format is a partially observable view of the environment using a
+compact and efficient encoding, with 3 input values per visible grid cell, 7x7x3 values total.
+These values are <strong>not pixels</strong>. If you want to obtain an array of RGB pixels as observations instead,
+use the <code class="docutils literal notranslate"><span class="pre">RGBImgPartialObsWrapper</span></code>. You can use it as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">gymnasium</span> <span class="k">as</span> <span class="nn">gym</span>
+<span class="kn">from</span> <span class="nn">minigrid.wrappers</span> <span class="kn">import</span> <span class="n">RGBImgPartialObsWrapper</span><span class="p">,</span> <span class="n">ImgObsWrapper</span>
+
+<span class="n">env</span> <span class="o">=</span> <span class="n">gym</span><span class="o">.</span><span class="n">make</span><span class="p">(</span><span class="s1">&#39;MiniGrid-Empty-8x8-v0&#39;</span><span class="p">)</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">RGBImgPartialObsWrapper</span><span class="p">(</span><span class="n">env</span><span class="p">)</span> <span class="c1"># Get pixel observations</span>
+<span class="n">env</span> <span class="o">=</span> <span class="n">ImgObsWrapper</span><span class="p">(</span><span class="n">env</span><span class="p">)</span> <span class="c1"># Get rid of the &#39;mission&#39; field</span>
+<span class="n">obs</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span> <span class="c1"># This now produces an RGB tensor only</span>
+</pre></div>
+</div>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
         </article>
@@ -342,14 +336,14 @@
         
         <div class="related-pages">
           
-            <a class="prev-page" href="../DictObservationSpaceWrapper/">
+            <a class="prev-page" href="../../content/publications/">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">DictObservationSpaceWrapper</div>
+                <div class="title">List of Publications</div>
                 
               </div>
             </a>
