@@ -8,11 +8,11 @@
     <meta property="og:type" content="website" />
     <meta property="og:description" content="" />
     <meta property="og:url" content="https://minigrid.farama.org/environments/minigrid/CrossingEnv.html" /><meta name="twitter:card" content="summary_large_image"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="../../../genindex/" /><link rel="search" title="Search" href="../../../search/" /><link rel="next" title="Dist Shift" href="../DistShiftEnv/" /><link rel="prev" title="Blocked Unlock Pickup" href="../BlockedUnlockPickupEnv/" />
+<link rel="index" title="Index" href="../../../genindex/" /><link rel="search" title="Search" href="../../../search/" /><link rel="next" title="Description" href="../DistShiftEnv/" /><link rel="prev" title="Description" href="../BlockedUnlockPickupEnv/" />
         <link rel="canonical" href="https://minigrid.farama.org/environments/minigrid/CrossingEnv.html" />
 
     <link rel="shortcut icon" href="../../../_static/minigrid-favicon.png"/><meta name="generator" content="sphinx-5.2.3, furo 2022.09.15.dev1"/>
-        <title>Crossing - MiniGrid Documentation</title>
+        <title>Description - MiniGrid Documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=c36209c3579494d5f9512671edd8cd731f7c406c" />
     <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=57f753f2a36df4cd87bf0e4232aabc9b3cc73912" />
@@ -203,7 +203,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -249,71 +249,415 @@
 <p class="caption" role="heading"><span class="caption-text">Environments</span></p>
 <ul class="current">
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../">Minigrid Environments</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../BlockedUnlockPickupEnv/">Blocked Unlock Pickup</a></li>
-<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Crossing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../DistShiftEnv/">Dist Shift</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../DoorKeyEnv/">Door Key</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../DynamicObstaclesEnv/">Dynamic Obstacles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../EmptyEnv/">Empty</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../FetchEnv/">Fetch</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../FourRoomsEnv/">Four Rooms</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../GoToDoorEnv/">Go To Door</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../GoToObjectEnv/">Go To Object</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../KeyCorridorEnv/">Key Corridor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../LavaGapEnv/">Lava Gap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../LockedRoomEnv/">Locked Room</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../MemoryEnv/">Memory</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../MultiRoomEnv/">Multi Room</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ObstructedMaze_1Dlhb/">Obstructed Maze Dlhb</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ObstructedMaze_Full/">Obstructed Maze Full</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../PlaygroundEnv/">Playground</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../PutNearEnv/">Put Near</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../RedBlueDoorEnv/">Red Blue Door</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../UnlockEnv/">Unlock</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../UnlockPickupEnv/">Unlock Pickup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../BlockedUnlockPickupEnv/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../BlockedUnlockPickupEnv/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../BlockedUnlockPickupEnv/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../BlockedUnlockPickupEnv/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../BlockedUnlockPickupEnv/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../BlockedUnlockPickupEnv/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../BlockedUnlockPickupEnv/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DistShiftEnv/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DistShiftEnv/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DistShiftEnv/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DistShiftEnv/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DistShiftEnv/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DistShiftEnv/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DistShiftEnv/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DoorKeyEnv/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DoorKeyEnv/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DoorKeyEnv/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DoorKeyEnv/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DoorKeyEnv/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DoorKeyEnv/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DoorKeyEnv/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DynamicObstaclesEnv/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DynamicObstaclesEnv/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DynamicObstaclesEnv/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DynamicObstaclesEnv/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DynamicObstaclesEnv/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DynamicObstaclesEnv/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../DynamicObstaclesEnv/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../EmptyEnv/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../EmptyEnv/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../EmptyEnv/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../EmptyEnv/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../EmptyEnv/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../EmptyEnv/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../EmptyEnv/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FetchEnv/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FetchEnv/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FetchEnv/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FetchEnv/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FetchEnv/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FetchEnv/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FetchEnv/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FourRoomsEnv/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FourRoomsEnv/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FourRoomsEnv/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FourRoomsEnv/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FourRoomsEnv/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FourRoomsEnv/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../FourRoomsEnv/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GoToDoorEnv/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GoToDoorEnv/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GoToDoorEnv/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GoToDoorEnv/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GoToDoorEnv/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GoToDoorEnv/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../GoToDoorEnv/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../KeyCorridorEnv/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../KeyCorridorEnv/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../KeyCorridorEnv/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../KeyCorridorEnv/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../KeyCorridorEnv/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../KeyCorridorEnv/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../KeyCorridorEnv/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LavaGapEnv/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LavaGapEnv/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LavaGapEnv/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LavaGapEnv/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LavaGapEnv/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LavaGapEnv/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LavaGapEnv/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LockedRoomEnv/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LockedRoomEnv/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LockedRoomEnv/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LockedRoomEnv/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LockedRoomEnv/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LockedRoomEnv/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../LockedRoomEnv/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MemoryEnv/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MemoryEnv/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MemoryEnv/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MemoryEnv/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MemoryEnv/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MemoryEnv/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MemoryEnv/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MultiRoomEnv/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MultiRoomEnv/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MultiRoomEnv/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MultiRoomEnv/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MultiRoomEnv/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MultiRoomEnv/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MultiRoomEnv/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PutNearEnv/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PutNearEnv/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PutNearEnv/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PutNearEnv/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PutNearEnv/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PutNearEnv/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PutNearEnv/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RedBlueDoorEnv/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RedBlueDoorEnv/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RedBlueDoorEnv/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RedBlueDoorEnv/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RedBlueDoorEnv/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RedBlueDoorEnv/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../RedBlueDoorEnv/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UnlockEnv/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UnlockEnv/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UnlockEnv/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UnlockEnv/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UnlockEnv/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UnlockEnv/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UnlockEnv/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UnlockPickupEnv/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UnlockPickupEnv/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UnlockPickupEnv/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UnlockPickupEnv/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UnlockPickupEnv/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UnlockPickupEnv/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UnlockPickupEnv/#registered-configurations">Registered Configurations</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../babyai/">BabyAI Environments</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBallGrey/">Go To Red Ball Grey</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBall/">Go To Red Ball</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBallNoDists/">Go To Red Ball No Dists</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToObj/">Go To Obj</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToLocal/">Go To Local</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoTo/">Go To</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToImpUnlock/">Go To Imp Unlock</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToSeq/">Go To Seq</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBlueBall/">Go To Red Blue Ball</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToDoor/">Go To Door</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToObjDoor/">Go To Obj Door</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/Open/">Open</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenRedDoor/">Open Red Door</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenDoor/">Open Door</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenTwoDoors/">Open Two Doors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenDoorsOrder/">Open Doors Order</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/Pickup/">Pickup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnblockPickup/">Unblock Pickup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/PickupLoc/">Pickup Loc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/PickupDist/">Pickup Dist</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/PickupAbove/">Pickup Above</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/PutNextLocal/">Put Next Local</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/PutNext/">Put Next</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/Unlock/">Unlock</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnlockLocal/">Unlock Local</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/KeyInBox/">Key In Box</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnlockPickup/">Unlock Pickup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/BlockedUnlockPickup/">Blocked Unlock Pickup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnlockToUnlock/">Unlock To Unlock</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/ActionObjDoor/">Action Obj Door</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/FindObjS5/">Find Obj</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/KeyCorridor/">Key Corridor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/OneRoomS8/">One Room</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/MoveTwoAcross/">Move Two Across</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/Synth/">Synth</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/SynthLoc/">Synth Loc</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/SynthSeq/">Synth Seq</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/MiniBossLevel/">Mini Boss Level</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/BossLevel/">Boss Level</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../babyai/BossLevelNoUnlock/">Boss Level No Unlock</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBallGrey/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBallGrey/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBallGrey/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBallGrey/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBallGrey/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBallGrey/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBallGrey/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBall/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBall/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBall/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBall/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBall/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBall/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBall/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBallNoDists/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBallNoDists/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBallNoDists/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBallNoDists/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBallNoDists/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBallNoDists/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBallNoDists/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToObj/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToObj/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToObj/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToObj/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToObj/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToObj/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToObj/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToLocal/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToLocal/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToLocal/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToLocal/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToLocal/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToLocal/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToLocal/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoTo/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoTo/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoTo/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoTo/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoTo/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoTo/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoTo/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToImpUnlock/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToImpUnlock/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToImpUnlock/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToImpUnlock/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToImpUnlock/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToImpUnlock/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToImpUnlock/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToSeq/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToSeq/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToSeq/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToSeq/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToSeq/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToSeq/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToSeq/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBlueBall/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBlueBall/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBlueBall/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBlueBall/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBlueBall/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBlueBall/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToRedBlueBall/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToDoor/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToDoor/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToDoor/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToDoor/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToDoor/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToDoor/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToDoor/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToObjDoor/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToObjDoor/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToObjDoor/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToObjDoor/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToObjDoor/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToObjDoor/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/GoToObjDoor/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Open/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Open/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Open/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Open/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Open/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Open/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Open/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenRedDoor/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenRedDoor/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenRedDoor/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenRedDoor/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenRedDoor/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenRedDoor/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenRedDoor/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenDoor/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenDoor/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenDoor/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenDoor/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenDoor/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenDoor/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenDoor/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenTwoDoors/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenTwoDoors/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenTwoDoors/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenTwoDoors/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenTwoDoors/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenTwoDoors/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenTwoDoors/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenDoorsOrder/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenDoorsOrder/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenDoorsOrder/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenDoorsOrder/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenDoorsOrder/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenDoorsOrder/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OpenDoorsOrder/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Pickup/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Pickup/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Pickup/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Pickup/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Pickup/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Pickup/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Pickup/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnblockPickup/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnblockPickup/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnblockPickup/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnblockPickup/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnblockPickup/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnblockPickup/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnblockPickup/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PickupLoc/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PickupLoc/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PickupLoc/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PickupLoc/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PickupLoc/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PickupLoc/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PickupLoc/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PickupDist/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PickupDist/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PickupDist/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PickupDist/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PickupDist/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PickupDist/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PickupDist/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PickupAbove/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PickupAbove/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PickupAbove/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PickupAbove/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PickupAbove/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PickupAbove/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PickupAbove/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PutNextLocal/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PutNextLocal/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PutNextLocal/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PutNextLocal/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PutNextLocal/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PutNextLocal/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PutNextLocal/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PutNext/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PutNext/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PutNext/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PutNext/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PutNext/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PutNext/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/PutNext/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Unlock/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Unlock/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Unlock/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Unlock/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Unlock/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Unlock/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Unlock/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnlockLocal/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnlockLocal/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnlockLocal/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnlockLocal/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnlockLocal/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnlockLocal/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnlockLocal/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/KeyInBox/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/KeyInBox/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/KeyInBox/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/KeyInBox/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/KeyInBox/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/KeyInBox/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/KeyInBox/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnlockPickup/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnlockPickup/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnlockPickup/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnlockPickup/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnlockPickup/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnlockPickup/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnlockPickup/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/BlockedUnlockPickup/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/BlockedUnlockPickup/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/BlockedUnlockPickup/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/BlockedUnlockPickup/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/BlockedUnlockPickup/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/BlockedUnlockPickup/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/BlockedUnlockPickup/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnlockToUnlock/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnlockToUnlock/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnlockToUnlock/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnlockToUnlock/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnlockToUnlock/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnlockToUnlock/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/UnlockToUnlock/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/ActionObjDoor/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/ActionObjDoor/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/ActionObjDoor/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/ActionObjDoor/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/ActionObjDoor/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/ActionObjDoor/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/ActionObjDoor/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/FindObjS5/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/FindObjS5/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/FindObjS5/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/FindObjS5/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/FindObjS5/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/FindObjS5/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/FindObjS5/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/KeyCorridor/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/KeyCorridor/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/KeyCorridor/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/KeyCorridor/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/KeyCorridor/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/KeyCorridor/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/KeyCorridor/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OneRoomS8/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OneRoomS8/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OneRoomS8/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OneRoomS8/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OneRoomS8/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OneRoomS8/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/OneRoomS8/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/MoveTwoAcross/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/MoveTwoAcross/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/MoveTwoAcross/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/MoveTwoAcross/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/MoveTwoAcross/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/MoveTwoAcross/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/MoveTwoAcross/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Synth/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Synth/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Synth/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Synth/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Synth/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Synth/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/Synth/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/SynthLoc/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/SynthLoc/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/SynthLoc/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/SynthLoc/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/SynthLoc/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/SynthLoc/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/SynthLoc/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/SynthSeq/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/SynthSeq/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/SynthSeq/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/SynthSeq/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/SynthSeq/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/SynthSeq/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/SynthSeq/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/MiniBossLevel/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/MiniBossLevel/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/MiniBossLevel/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/MiniBossLevel/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/MiniBossLevel/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/MiniBossLevel/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/MiniBossLevel/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/BossLevel/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/BossLevel/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/BossLevel/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/BossLevel/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/BossLevel/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/BossLevel/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/BossLevel/#registered-configurations">Registered Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/BossLevelNoUnlock/">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/BossLevelNoUnlock/#mission-space">Mission Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/BossLevelNoUnlock/#action-space">Action Space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/BossLevelNoUnlock/#observation-encoding">Observation Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/BossLevelNoUnlock/#rewards">Rewards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/BossLevelNoUnlock/#termination">Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../babyai/BossLevelNoUnlock/#registered-configurations">Registered Configurations</a></li>
 </ul>
 </li>
 </ul>
@@ -359,7 +703,7 @@
                 </svg>
               </button>
             </div>
-            <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
               <div class="visually-hidden">Toggle table of contents sidebar</div>
               <i class="icon"><svg>
                   <use href="#svg-toc"></use>
@@ -368,13 +712,11 @@
           </div>
           <article role="main">
             
-            <section id="crossing">
-<h1>Crossing<a class="headerlink" href="#crossing" title="Permalink to this heading">#</a></h1>
-<figure class="align-default">
+            <figure class="align-default">
 <a class="reference internal image-reference" href="../../../_images/CrossingEnv.gif"><img alt="Crossing" src="../../../_images/CrossingEnv.gif" style="width: 200px;" /></a>
 </figure>
 <section id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">#</a></h2>
+<h1>Description<a class="headerlink" href="#description" title="Permalink to this heading">#</a></h1>
 <p>Depending on the <code class="docutils literal notranslate"><span class="pre">obstacle_type</span></code> parameter:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Lava</span></code> - The agent has to reach the green goal square on the other corner
@@ -390,7 +732,7 @@ useful for quickly testing your algorithms.</p></li>
 </ul>
 </section>
 <section id="mission-space">
-<h2>Mission Space<a class="headerlink" href="#mission-space" title="Permalink to this heading">#</a></h2>
+<h1>Mission Space<a class="headerlink" href="#mission-space" title="Permalink to this heading">#</a></h1>
 <p>Depending on the <code class="docutils literal notranslate"><span class="pre">obstacle_type</span></code> parameter:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">Lava</span></code> - “avoid the lava and get to the green goal square”</p></li>
@@ -398,7 +740,7 @@ useful for quickly testing your algorithms.</p></li>
 </ul>
 </section>
 <section id="action-space">
-<h2>Action Space<a class="headerlink" href="#action-space" title="Permalink to this heading">#</a></h2>
+<h1>Action Space<a class="headerlink" href="#action-space" title="Permalink to this heading">#</a></h1>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
 <thead>
@@ -441,7 +783,7 @@ useful for quickly testing your algorithms.</p></li>
 </div>
 </section>
 <section id="observation-encoding">
-<h2>Observation Encoding<a class="headerlink" href="#observation-encoding" title="Permalink to this heading">#</a></h2>
+<h1>Observation Encoding<a class="headerlink" href="#observation-encoding" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Each tile is encoded as a 3 dimensional tuple:
 <code class="docutils literal notranslate"><span class="pre">(OBJECT_IDX,</span> <span class="pre">COLOR_IDX,</span> <span class="pre">STATE)</span></code></p></li>
@@ -451,11 +793,11 @@ useful for quickly testing your algorithms.</p></li>
 </ul>
 </section>
 <section id="rewards">
-<h2>Rewards<a class="headerlink" href="#rewards" title="Permalink to this heading">#</a></h2>
+<h1>Rewards<a class="headerlink" href="#rewards" title="Permalink to this heading">#</a></h1>
 <p>A reward of ‘1’ is given for success, and ‘0’ for failure.</p>
 </section>
 <section id="termination">
-<h2>Termination<a class="headerlink" href="#termination" title="Permalink to this heading">#</a></h2>
+<h1>Termination<a class="headerlink" href="#termination" title="Permalink to this heading">#</a></h1>
 <p>The episode ends if any one of the following conditions is met:</p>
 <ol class="arabic simple">
 <li><p>The agent reaches the goal.</p></li>
@@ -464,7 +806,7 @@ useful for quickly testing your algorithms.</p></li>
 </ol>
 </section>
 <section id="registered-configurations">
-<h2>Registered Configurations<a class="headerlink" href="#registered-configurations" title="Permalink to this heading">#</a></h2>
+<h1>Registered Configurations<a class="headerlink" href="#registered-configurations" title="Permalink to this heading">#</a></h1>
 <p>S: size of the map SxS.
 N: number of valid crossings across lava or walls from the starting position
 to the goal</p>
@@ -487,7 +829,6 @@ to the goal</p>
 </li>
 </ul>
 </section>
-</section>
 
           </article>
         </div>
@@ -499,7 +840,7 @@ to the goal</p>
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Dist Shift</div>
+                <div class="title">Description</div>
               </div>
               <svg class="furo-related-icon">
                 <use href="#svg-arrow-right"></use>
@@ -514,7 +855,7 @@ to the goal</p>
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Blocked Unlock Pickup</div>
+                <div class="title">Description</div>
                 
               </div>
             </a>
@@ -546,33 +887,8 @@ to the goal</p>
           
         </footer>
       </div>
-      <aside class="toc-drawer">
+      <aside class="toc-drawer no-toc">
         
-        
-        <div class="toc-sticky toc-scroll">
-          <div class="toc-title-container">
-            <span class="toc-title">
-              On this page
-            </span>
-          </div>
-          <div class="toc-tree-container">
-            <div class="toc-tree">
-              <ul>
-<li><a class="reference internal" href="#">Crossing</a><ul>
-<li><a class="reference internal" href="#description">Description</a></li>
-<li><a class="reference internal" href="#mission-space">Mission Space</a></li>
-<li><a class="reference internal" href="#action-space">Action Space</a></li>
-<li><a class="reference internal" href="#observation-encoding">Observation Encoding</a></li>
-<li><a class="reference internal" href="#rewards">Rewards</a></li>
-<li><a class="reference internal" href="#termination">Termination</a></li>
-<li><a class="reference internal" href="#registered-configurations">Registered Configurations</a></li>
-</ul>
-</li>
-</ul>
-
-            </div>
-          </div>
-        </div>
         
         
       </aside>
