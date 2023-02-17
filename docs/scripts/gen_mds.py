@@ -8,6 +8,9 @@ __email__ = "contact@fenggu.me"
 import os
 import re
 
+import gymnasium
+import gymnasium.envs
+import gymnasium.envs.registration
 from gymnasium.envs.registration import registry
 from tqdm import tqdm
 from utils import trim
